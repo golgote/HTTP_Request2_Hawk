@@ -3,9 +3,9 @@ HTTP_Request2_Hawk
 
 [Hawk](https://github.com/hueniverse/hawk) authenticated requests with the [HTTP_Request2](https://github.com/pear/HTTP_Request2) package from PEAR.
 
-This class is built as an [Observer](http://pear.php.net/manual/en/package.http.http-request2.observers.php) for HTTP_Request2 that modifies the requests on the **connect** event by adding the Server-Authorization header.
+This class is built as an [Observer](http://pear.php.net/manual/en/package.http.http-request2.observers.php) for HTTP_Request2 that modifies the requests on the **connect** event by adding the Authorization header.
 
-On the **receivedHeaders** event, the Observer also authentifies the server response and makes the result of the authentication available in the Observer itself for later use.
+On the **receivedHeaders** event, the Observer also authentifies the Server-Authorization header in the response and makes the result available in the Observer itself for later use.
 
 [Hawk](https://github.com/hueniverse/hawk) is an HTTP authentication scheme using a message authentication code (MAC) algorithm to provide partial HTTP request cryptographic verification.
 
