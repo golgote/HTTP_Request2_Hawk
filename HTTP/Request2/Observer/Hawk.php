@@ -274,7 +274,7 @@ class HTTP_Request2_Observer_Hawk implements SplObserver
         }
 
         $calculatedHash = self::calculatePayloadHash($options['payload'], $credentials['algorithm'], $response->getHeader('content-type'));
-        if ($calculatedHash !== $attributes['hash']) {
+        if ($calculatedHash === $attributes['hash']) {
             $this->valid = true;
             return;
         }
